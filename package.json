@@ -1,0 +1,27 @@
+{
+  "name": "keep-to-markdown",
+  "version": "1.0.0",
+  "description": "Grab note content from Google Keep and save as a bunch of markdown (.md) files",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run build:live",
+    "build": "tsc -p .",
+    "build:live": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/index.ts"
+  },
+  "author": "Cameron Chamberlain",
+  "license": "GPL3+",
+  "dependencies": {
+    "commander": "^3.0.2",
+    "glob": "^7.1.4",
+    "turndown": "^5.0.3"
+  },
+  "devDependencies": {
+    "@types/commander": "^2.12.2",
+    "@types/glob": "^7.1.1",
+    "@types/turndown": "^5.0.0",
+    "@types/node": "^12.7.12",
+    "nodemon": "^1.19.3",
+    "ts-node": "^8.4.1",
+    "typescript": "^3.6.4"
+  }
+}
