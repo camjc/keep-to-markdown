@@ -6,14 +6,17 @@
   "scripts": {
     "start": "npm run build:live",
     "build": "tsc -p .",
-    "build:live": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/index.ts"
+    "build:live": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/index.ts",
+    "prepare": "npm run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "author": "Cameron Chamberlain",
   "license": "GPL3+",
   "dependencies": {
     "commander": "^3.0.2",
     "glob": "^7.1.4",
-    "turndown": "^5.0.3"
+    "turndown": "^5.0.3",
+    "@snyk/protect": "latest"
   },
   "devDependencies": {
     "@types/commander": "^2.12.2",
@@ -23,5 +26,6 @@
     "nodemon": "^1.19.3",
     "ts-node": "^8.4.1",
     "typescript": "^3.6.4"
-  }
+  },
+  "snyk": true
 }
